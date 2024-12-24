@@ -10,7 +10,7 @@ import vn.com.leetcode.problems.Problem;
 public class LeetCodeJava {
 
     public static void main(String[] args) {
-        executeProblem(1);
+        executeProblem(14);
     }
 
     private static void executeProblem(int num) {

@@ -20,7 +20,6 @@ public abstract class Problem {
         System.out.println(result);
     }
 
-    public abstract Object solve();
-
     public abstract String title();
+    public abstract Object solve();
 }
