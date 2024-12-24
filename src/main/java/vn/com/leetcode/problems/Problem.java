@@ -3,6 +3,7 @@ package vn.com.leetcode.problems;
 import org.apache.commons.lang3.time.StopWatch;
 
 import java.util.concurrent.TimeUnit;
+import vn.com.leetcode.common.JsonMapper;
 
 /**
  * @author : AnhTuPhi
@@ -16,10 +17,9 @@ public abstract class Problem {
         stopWatch.start();
         var result = solve();
         stopWatch.stop();
-        System.out.println("Time elapsed: " + stopWatch.getTime(TimeUnit.MILLISECONDS));
-        System.out.println(result);
+        System.out.println("Time elapsed: " + stopWatch.getTime(TimeUnit.NANOSECONDS));
+        System.out.println(JsonMapper.readTree(result));
     }
 
-    public abstract String title();
     public abstract Object solve();
 }

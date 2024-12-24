@@ -8,10 +8,6 @@ import vn.com.leetcode.problems.Problem;
  * @project : leetcode-java
  **/
 public class Problem1 extends Problem {
-    @Override
-    public String title() {
-        return "";
-    }
 
     @Override
     public Object solve() {
