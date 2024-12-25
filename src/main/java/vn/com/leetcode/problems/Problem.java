@@ -17,7 +17,7 @@ public abstract class Problem {
         stopWatch.start();
         var result = solve();
         stopWatch.stop();
-        System.out.println("Time elapsed: " + stopWatch.getTime(TimeUnit.NANOSECONDS));
+        System.out.println("Time elapsed: " + stopWatch.getTime(TimeUnit.MICROSECONDS) + " microseconds");
         System.out.println(JsonMapper.readTree(result));
     }
 
