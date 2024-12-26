@@ -26,5 +26,11 @@ strs[i] consists of only lowercase English letters.
 ```
 
 ## Solution
+The important thing is realized that using array sorts the strings in lexicographical order.
+
+After sorts, the first and last strings are the longest common prefix. 
+We just need to check these instead of looping the whole strings.\
 
 ## Complexity
+Time: 0ms
+Space: O(n)
