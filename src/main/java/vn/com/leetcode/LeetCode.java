@@ -7,10 +7,10 @@ import vn.com.leetcode.problems.Problem;
  * @created : 12/23/2024 - 11:45 PM - Monday
  * @project : leetcode-java
  **/
-public class LeetCodeJava {
+public class LeetCode {
 
     public static void main(String[] args) {
-        executeProblem(14);
+        executeProblem(1768);
     }
 
     private static void executeProblem(int num) {
@@ -19,7 +19,7 @@ public class LeetCodeJava {
             var instance = (Problem) Class.forName(classPath).getDeclaredConstructor().newInstance();
             instance.execute();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Execute got exception: " + e.getMessage());
         }
     }
 
@@ -28,21 +28,9 @@ public class LeetCodeJava {
     }
 
     private static String detectPackageName(int num) {
-        var temp = num / 100;
-        switch (temp) {
-            case 0:
-                return "p0001_p0100";
-            case 1:
-                return "p0101_p0200";
-            case 2:
-                return "p0201_p0300";
-            case 3:
-                return "p0301_p0400";
-            case 4:
-                return "p0401_p0500";
-            default:
-                return "";
-        }
+        int start = num - (num - 1) % 100;
+        int end = start + 99;
+        return String.format("p%04d_p%04d", start, end);
     }
 
     private static String detectClassName(int num) {

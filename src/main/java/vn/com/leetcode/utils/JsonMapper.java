@@ -1,4 +1,4 @@
-package vn.com.leetcode.common;
+package vn.com.leetcode.utils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;

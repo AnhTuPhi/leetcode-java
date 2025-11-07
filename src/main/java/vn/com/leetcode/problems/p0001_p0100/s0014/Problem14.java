@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.time.StopWatch;
-import vn.com.leetcode.common.JsonMapper;
+import vn.com.leetcode.utils.JsonMapper;
 import vn.com.leetcode.problems.Problem;
 
 /**
