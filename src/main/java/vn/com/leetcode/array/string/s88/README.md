@@ -122,3 +122,5 @@ Bước 4: nums1[1]=2 vs nums2[0]=2 → ghi 2 → [1,2,2,3,5,6]  | i=1, j=-1, k=
 j < 0 → thoát vòng lặp
 Kết quả: [1,2,2,3,5,6] ✅
 ```
+
+![img.png](img.png)
