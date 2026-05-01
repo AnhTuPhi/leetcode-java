@@ -1,5 +1,7 @@
 package vn.com.leetcode;
 
+import vn.com.leetcode.utils.JsonMapper;
+
 import java.util.List;
 
 public final class LeetCodeRunner {
@@ -38,9 +40,9 @@ public final class LeetCodeRunner {
                     YELLOW, formatNs(elapsedNs), RESET);
 
             if (!ok) {
-                System.out.printf("       input:    %s%n", tc.input());
-                System.out.printf("       expected: %s%n", tc.expected());
-                System.out.printf("       actual:   %s%n", actual);
+                System.out.printf("       input:    %s%n", JsonMapper.write(tc.input()));
+                System.out.printf("       expected: %s%n", JsonMapper.write(tc.expected()));
+                System.out.printf("       actual:   %s%n", JsonMapper.write(actual));
             }
         }
 

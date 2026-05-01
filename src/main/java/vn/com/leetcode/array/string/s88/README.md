@@ -1,6 +1,6 @@
 # 88. Merge Sorted Array
 
-**Level:** Easy
+**Difficulty:** Easy
 
 ## Problem
 
