@@ -126,6 +126,8 @@ Kết quả: k = i+1 = 3
 **Java**
 ```java
 public int removeDuplicates(int[] nums) {
+    if (nums.length == 0) return 0;
+    
     int i = 0;
     for (int j = 1; j < nums.length; j++) {
         if (nums[j] != nums[i]) {
