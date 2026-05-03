@@ -20,6 +20,7 @@ public class s26_remove_duplicate extends Solution<Input, int[]> {
             }
         }
 
+        i++;
         return nums;
     }
 
