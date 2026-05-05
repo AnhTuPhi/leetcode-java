@@ -12,6 +12,14 @@ record Input(int[] nums) {}
 
 public class s169_majority_element extends Solution<Input, Integer> {
 
+    /**
+     * Solutions áp dụng Hashmap để count số lần lặp khi loop
+     * Độ phức tạp Time: O(n)
+     * Độ phức tạp Space: O(n)
+     * Vì n càng tăng thì cost là n => tăng tuyến tính theo
+     * @param input
+     * @return
+     */
     @Override
     public Integer solve(Input input) {
         int[] nums = input.nums();
@@ -35,6 +43,33 @@ public class s169_majority_element extends Solution<Input, Integer> {
         }
 
         return 0;
+    }
+
+    /**
+     * Solutions áp dụng Boyer Moore Voting Algorithm
+     * Độ phức tạp Time: O(n)
+     * Độ phức tạp Space: O(1)
+     * @param input
+     * @return
+     */
+    public Integer solve2(Input input) {
+        int[] nums = input.nums();
+        int vote = 0;
+        int candidate = 0;
+
+        for (int num : nums) {
+            if (vote == 0) {
+                candidate = num;
+            }
+
+            if (candidate == num) {
+                vote++;
+            } else {
+                vote--;
+            }
+        }
+
+        return candidate;
     }
 
     @Override
