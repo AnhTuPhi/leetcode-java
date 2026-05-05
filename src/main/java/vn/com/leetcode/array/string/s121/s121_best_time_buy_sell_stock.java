@@ -10,6 +10,13 @@ record Input(int[] prices) {
 }
 
 public class s121_best_time_buy_sell_stock extends Solution<Input, Integer> {
+
+    /**
+     * Sử dụng cách phổ thông
+     *
+     * @param input
+     * @return
+     */
     @Override
     public Integer solve(Input input) {
         int[] prices = input.prices();
@@ -28,13 +35,19 @@ public class s121_best_time_buy_sell_stock extends Solution<Input, Integer> {
         return profit;
     }
 
+    /**
+     * Sủ dụng thuật toán Kadane để giải
+     *
+     * @param input
+     * @return
+     */
     public Integer solve2(Input input) {
         int[] prices = input.prices();
 
         int currentProfit = 0;
         int maxProfit = 0;
 
-        for (int i =1; i < prices.length; i++) {
+        for (int i = 1; i < prices.length; i++) {
             int diff = prices[i] - prices[i - 1];
             currentProfit = Math.max(0, currentProfit + diff);
             maxProfit = Math.max(maxProfit, currentProfit);
@@ -49,5 +62,10 @@ public class s121_best_time_buy_sell_stock extends Solution<Input, Integer> {
                 TestCase.of(new Input(new int[]{7, 1, 5, 3, 6, 4}), 5),
                 TestCase.of(new Input(new int[]{7, 6, 4, 3, 1}), 0)
         );
+    }
+
+    public static void main(String[] args) {
+        var sol = new s121_best_time_buy_sell_stock();
+        sol.run();
     }
 }

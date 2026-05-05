@@ -68,9 +68,26 @@ class Solution {
 ### Áp dụng Kadane's Algorithm
 Được interviewer đánh gía cao
 
+Thoạt nhìn thì thấy không khác gì so với cách cơ bản.
+Nhưng thực tế thì do đã apply vào toán học rồi.
+Cụ thể ở đoạn tính ra diff giữa hai ngày
+
 Time: O(n)
 Space: O(1)
 
 ```java
+public Integer solve2(Input input) {
+        int[] prices = input.prices();
 
+        int currentProfit = 0;
+        int maxProfit = 0;
+
+        for (int i =1; i < prices.length; i++) {
+            int diff = prices[i] - prices[i - 1];
+            currentProfit = Math.max(0, currentProfit + diff);
+            maxProfit = Math.max(maxProfit, currentProfit);
+        }
+
+        return maxProfit;
+    }
 ```
