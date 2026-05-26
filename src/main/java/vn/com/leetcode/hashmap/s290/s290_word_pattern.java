@@ -1,4 +1,4 @@
-package vn.com.leetcode.hashmap.s209;
+package vn.com.leetcode.hashmap.s290;
 
 import vn.com.leetcode.Solution;
 import vn.com.leetcode.TestCase;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 record Input(String pattern, String s) {}
-public class s209_word_pattern extends Solution<Input, Boolean> {
+public class s290_word_pattern extends Solution<Input, Boolean> {
     @Override
     public Boolean solve(Input input) {
         var pattern = input.pattern();
@@ -46,7 +46,7 @@ public class s209_word_pattern extends Solution<Input, Boolean> {
     }
 
     public static void main(String[] args) {
-        var sol = new s209_word_pattern();
+        var sol = new s290_word_pattern();
         sol.run();
     }
 }
