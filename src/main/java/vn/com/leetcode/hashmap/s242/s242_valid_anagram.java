@@ -72,7 +72,7 @@ public class s242_valid_anagram extends Solution<Input, Boolean> {
      * @return
      */
     public boolean solve3(String s, String t)  {
-
+        return false;
     }
 
     @Override
